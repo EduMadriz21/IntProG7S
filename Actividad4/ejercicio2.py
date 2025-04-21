@@ -1,0 +1,12 @@
+import datetime as dt
+
+fecha_inicio_sesio = input("Ultio inicio de sesion en formato YYYY-MM-DD: ")
+fecha_inicio_sesio = dt.datetime.strptime(fecha_inicio_sesio, "%Y-%m-%d")
+
+fecha_actual = dt.datetime.now()
+
+contar_dias = (fecha_actual - fecha_inicio_sesio).days
+if contar_dias > 30:
+    print("Inactivo por mas de 30 dias")
+else: 
+    print("Estamos bien.")
